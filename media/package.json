@@ -1,0 +1,19 @@
+{
+  "name": "media-examples",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "youtube_transcript": "tsx youtube_transcript.ts",
+    "youtube_video": "tsx youtube_video.ts",
+    "youtube_channel": "tsx youtube_channel.ts",
+    "youtube_search": "tsx youtube_search.ts"
+  },
+  "dependencies": {
+    "@toolkitapi/node-sdk": "^1.0.2"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  },
+  "type": "module"
+}

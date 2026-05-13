@@ -1,0 +1,16 @@
+{
+  "name": "toolkitapi-node-examples",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "tsx _run_tests.ts"
+  },
+  "dependencies": {
+    "@toolkitapi/node-sdk": "^1.0.2"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}

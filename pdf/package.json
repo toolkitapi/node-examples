@@ -1,0 +1,21 @@
+{
+  "name": "pdf-examples",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "merge": "tsx merge.ts",
+    "split": "tsx split.ts",
+    "compress": "tsx compress.ts",
+    "watermark": "tsx watermark.ts",
+    "text_extract": "tsx text_extract.ts",
+    "metadata": "tsx metadata.ts"
+  },
+  "dependencies": {
+    "@toolkitapi/node-sdk": "^1.0.2"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  },
+  "type": "module"
+}

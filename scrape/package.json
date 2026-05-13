@@ -1,0 +1,20 @@
+{
+  "name": "scrape-examples",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "seo_audit": "tsx seo_audit.ts",
+    "seo_keyword_density": "tsx seo_keyword_density.ts",
+    "seo_mobile_friendly": "tsx seo_mobile_friendly.ts",
+    "seo_pagespeed": "tsx seo_pagespeed.ts",
+    "scrape": "tsx scrape.ts"
+  },
+  "dependencies": {
+    "@toolkitapi/node-sdk": "^1.0.2"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  },
+  "type": "module"
+}

@@ -1,0 +1,22 @@
+{
+  "name": "textanalysis-examples",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "readability_score": "tsx readability_score.ts",
+    "summarize": "tsx summarize.ts",
+    "text_similarity": "tsx text_similarity.ts",
+    "detect_language": "tsx detect_language.ts",
+    "profanity_filter": "tsx profanity_filter.ts",
+    "word_frequency": "tsx word_frequency.ts",
+    "data_mask": "tsx data_mask.ts"
+  },
+  "dependencies": {
+    "@toolkitapi/node-sdk": "^1.0.2"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  },
+  "type": "module"
+}

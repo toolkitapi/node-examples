@@ -1,0 +1,21 @@
+{
+  "name": "geo-examples",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "ip_lookup": "tsx ip_lookup.ts",
+    "ip_threat": "tsx ip_threat.ts",
+    "distance": "tsx distance.ts",
+    "country_info": "tsx country_info.ts",
+    "timezone_convert": "tsx timezone_convert.ts",
+    "phone_validate": "tsx phone_validate.ts"
+  },
+  "dependencies": {
+    "@toolkitapi/node-sdk": "^1.0.2"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  },
+  "type": "module"
+}

@@ -1,0 +1,25 @@
+{
+  "name": "auth-examples",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "hash_password": "tsx hash_password.ts",
+    "verify_password": "tsx verify_password.ts",
+    "password_strength": "tsx password_strength.ts",
+    "generate_password": "tsx generate_password.ts",
+    "jwt_generate": "tsx jwt_generate.ts",
+    "jwt_verify": "tsx jwt_verify.ts",
+    "totp_generate": "tsx totp_generate.ts",
+    "generate_key": "tsx generate_key.ts",
+    "encrypt": "tsx encrypt.ts",
+    "base64_encode": "tsx base64_encode.ts"
+  },
+  "dependencies": {
+    "@toolkitapi/node-sdk": "^1.0.2"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  },
+  "type": "module"
+}

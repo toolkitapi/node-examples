@@ -1,0 +1,23 @@
+{
+  "name": "email-examples",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "validate_email": "tsx validate_email.ts",
+    "validate_batch": "tsx validate_batch.ts",
+    "catch_all": "tsx catch_all.ts",
+    "role_check": "tsx role_check.ts",
+    "normalize": "tsx normalize.ts",
+    "provider": "tsx provider.ts",
+    "spam_score": "tsx spam_score.ts",
+    "security": "tsx security.ts"
+  },
+  "dependencies": {
+    "@toolkitapi/node-sdk": "^1.0.2"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  },
+  "type": "module"
+}

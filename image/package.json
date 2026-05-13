@@ -1,0 +1,21 @@
+{
+  "name": "image-examples",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "resize": "tsx resize.ts",
+    "compress": "tsx compress.ts",
+    "strip_exif": "tsx strip_exif.ts",
+    "remove_background": "tsx remove_background.ts",
+    "metadata": "tsx metadata.ts",
+    "colors": "tsx colors.ts"
+  },
+  "dependencies": {
+    "@toolkitapi/node-sdk": "^1.0.2"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  },
+  "type": "module"
+}

@@ -1,0 +1,21 @@
+{
+  "name": "barcode-examples",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "qr_generate": "tsx qr_generate.ts",
+    "qr_decode": "tsx qr_decode.ts",
+    "qr_bulk": "tsx qr_bulk.ts",
+    "generate": "tsx generate.ts",
+    "decode": "tsx decode.ts",
+    "types": "tsx types.ts"
+  },
+  "dependencies": {
+    "@toolkitapi/node-sdk": "^1.0.2"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  },
+  "type": "module"
+}

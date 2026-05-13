@@ -1,0 +1,25 @@
+{
+  "name": "dns-examples",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "lookup": "tsx lookup.ts",
+    "lookup_all": "tsx lookup_all.ts",
+    "lookup_bulk": "tsx lookup_bulk.ts",
+    "whois": "tsx whois.ts",
+    "domain_age": "tsx domain_age.ts",
+    "available": "tsx available.ts",
+    "certificate": "tsx certificate.ts",
+    "health": "tsx health.ts",
+    "propagation": "tsx propagation.ts",
+    "typosquat": "tsx typosquat.ts"
+  },
+  "dependencies": {
+    "@toolkitapi/node-sdk": "^1.0.2"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  },
+  "type": "module"
+}

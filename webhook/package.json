@@ -1,0 +1,20 @@
+{
+  "name": "webhook-examples",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "create_bin": "tsx create_bin.ts",
+    "get_bin": "tsx get_bin.ts",
+    "list_requests": "tsx list_requests.ts",
+    "create_mock": "tsx create_mock.ts",
+    "hit_mock": "tsx hit_mock.ts"
+  },
+  "dependencies": {
+    "@toolkitapi/node-sdk": "^1.0.2"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  },
+  "type": "module"
+}
