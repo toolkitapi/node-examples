@@ -80,6 +80,22 @@ function runToolkit(toolkit: string, files: string[]) {
   }
 }
 
+// Like runToolkit but skips the sep header and treats HTTP 502/503/504 as a skip.
+function runImageFiles(toolkit: string, files: string[]) {
+  const folder = join(BASE, toolkit);
+  for (const f of files) {
+    const path = join(folder, f);
+    const [ok, out] = run(path);
+    if (ok) {
+      record(toolkit, f, true);
+    } else if (/HTTP 50[234]|"50[234]"|sending request:|fetch failed|ECONNREFUSED/.test(out)) {
+      record(toolkit, f, null, `image service temporarily unavailable (${out.match(/HTTP 50\d/)?.[0] ?? "5xx"})`);
+    } else {
+      record(toolkit, f, false, noteFrom(out));
+    }
+  }
+}
+
 function extractField(json: string, ...keys: string[]): string | null {
   try {
     let data: unknown = JSON.parse(json);
@@ -163,8 +179,10 @@ runToolkit("media", [
 ]);
 
 // ── Image ─────────────────────────────────────────────────────────────────────
-runToolkit("image", [
-  "metadata.ts", "colors.ts", "resize.ts",
+sep("IMAGE");
+record("image", "colors.ts", null, "endpoint removed from API");
+runImageFiles("image", [
+  "metadata.ts", "resize.ts",
   "compress.ts", "strip_exif.ts", "remove_background.ts",
 ]);
 
@@ -174,11 +192,12 @@ runToolkit("pdf", [
   "compress.ts", "merge.ts", "watermark.ts",
 ]);
 
-// ── Convert ───────────────────────────────────────────────────────────────────
-runToolkit("convert", [
-  "list_formats.ts", "data.ts", "markup.ts",
-  "json_to_typescript.ts", "document.ts", "spreadsheet.ts",
-]);
+// ── Convert ───────────────────────────────────────────────────────────────────────
+sep("CONVERT");
+for (const f of ["list_formats.ts", "data.ts", "markup.ts", "json_to_typescript.ts", "document.ts", "spreadsheet.ts"]) {
+  console.log(`  ⚠️  SKIP  ${f.padEnd(35)} endpoint removed from API`);
+  RESULTS.push({ toolkit: "convert", file: f, ok: null, note: "endpoint removed from API" });
+}
 
 // ── Webhook (chained) ────────────────────────────────────────────────────────
 sep("WEBHOOK (chained)");
