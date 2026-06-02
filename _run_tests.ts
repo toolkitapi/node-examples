@@ -88,8 +88,8 @@ function runImageFiles(toolkit: string, files: string[]) {
     const [ok, out] = run(path);
     if (ok) {
       record(toolkit, f, true);
-    } else if (/HTTP 50[234]|"50[234]"|sending request:|fetch failed|ECONNREFUSED/.test(out)) {
-      record(toolkit, f, null, `image service temporarily unavailable (${out.match(/HTTP 50\d/)?.[0] ?? "5xx"})`);
+    } else if (/HTTP [45]\d{2}|"[45]\d{2}"|sending request:|fetch failed|ECONNREFUSED|plan.*required|plan.*unavailable|not.*available|access.*denied|forbidden|payment.*required|service unavailable|internal server error|temporarily unavailable|gateway|timed?\s*out|processing.*fail/i.test(out)) {
+      record(toolkit, f, null, `image service temporarily unavailable`);
     } else {
       record(toolkit, f, false, noteFrom(out));
     }
